@@ -17,38 +17,51 @@ class MainView : UIView {
         }
     }
 
-    var tvShowsCollectionView: UICollectionView!
+    fileprivate var tvShowsTableView : UITableView!
+
+    private let disposeBag = DisposeBag()
 
     fileprivate func bind() {
+        
+        self.model.tvShows.asObservable().subscribe(onNext: {
+            [unowned self] values in
+            DispatchQueue.main.async {
+                self.tvShowsTableView.reloadData()
+            }
+        }).disposed(by: self.disposeBag)
 
     }
 
     fileprivate func setup() {
-        self.setupCollectionView()
+        self.setupTable()
+
+        self.model.setup()
     }
 
-    fileprivate func setupCollectionView() {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+    fileprivate func setupTable() {
+        let tableView = UITableView(frame: .zero, style: .grouped)
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
 
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(collectionView)
+        self.addSubview(tableView)
 
         NSLayoutConstraint.activate([
-            collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            collectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            collectionView.topAnchor.constraint(equalTo: self.topAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+            tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            tableView.topAnchor.constraint(equalTo: self.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
 
-        collectionView.register(TVShowCell.classForCoder(), forCellWithReuseIdentifier: "TVShowCell")
-        collectionView.dataSource = model
-        collectionView.delegate = model
-        collectionView.backgroundColor = UIColor.clear
+        tableView.rowHeight = 100.0
+        tableView.register(UINib(nibName: "TVShowCellView", bundle: nil), forCellReuseIdentifier: "TVShowCell")
+        tableView.dataSource = model
+        tableView.delegate = model
+        tableView.backgroundColor = UIColor.clear
 
-        self.tvShowsCollectionView = collectionView
+        tableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        tableView.separatorStyle = .none
+
+        self.tvShowsTableView = tableView
     }
     
 

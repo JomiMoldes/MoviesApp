@@ -18,8 +18,12 @@ class MoviesService {
     
     static func search(query: String, success: @escaping ((SearchResponse) -> Void), failure: @escaping ((NSError) -> Void)) {
         guard let url = url(for: SEARCH_URI, key: API_KEY, items: ["query": query])
-            else { return failure(NSError(domain: "Movies", code: -1, userInfo: ["message":"cannot read url"])) }
-        self.request(url: url, success: { json in
+            else {
+            return failure(NSError(domain: "Movies", code: -1, userInfo: ["message":"cannot read url"]))
+        }
+
+        self.request(url: url, success: {
+            json in
             if let searchResponse = SearchResponse.fromJSON(json: json) {
                 success(searchResponse)
             } else {

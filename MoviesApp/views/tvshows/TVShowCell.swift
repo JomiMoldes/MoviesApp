@@ -9,11 +9,19 @@
 import Foundation
 import UIKit
 
-class TVShowCell : UICollectionViewCell {
+class TVShowCell : UITableViewCell {
     
     // TODO: Implement
     
+    @IBOutlet weak var thumbImageView: UIImageView!
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var genreLabel: UILabel!
+    
+    @IBOutlet weak var addButton: UIButton!
+    
     func fill(with: TVShow) {
+        self.titleLabel.text = with.name
         
     }
     

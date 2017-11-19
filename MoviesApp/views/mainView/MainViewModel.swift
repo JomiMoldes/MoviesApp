@@ -10,32 +10,61 @@ import RxCocoa
 
 class MainViewModel : NSObject {
 
-    var tvShows = [TVShow]()
-    
+    var tvShows = Variable<[TVShow]>([TVShow]())
+
+    func setup() {
+        MoviesService.search(query: "breaking", success: {
+            searchResponse in
+
+            self.tvShows.value = searchResponse.results
+
+        }, failure: { error in
+            print(error)
+        })
+    }
+
 }
 
-extension MainViewModel : UICollectionViewDataSource {
+extension MainViewModel : UITableViewDelegate {
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TVShowCell", for: indexPath) as! TVShowCell
-        cell.fill(with: self.tvShows[indexPath.row])
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) as? TVShowCell {
+//            cell.backgroundColor = UIColor.clear
+//            cell.contentView.backgroundColor = UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 0.3)
+//            self.selectedRow(installment: installment)
+        }
+    }
+
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) {
+//            cell.contentView.backgroundColor = UIColor.white
+        }
+    }
+
+}
+
+extension MainViewModel : UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.tvShows.value.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell : TVShowCell!
+
+        let tvShowSelected = self.tvShows.value[(indexPath as NSIndexPath).item]
+        cell = tableView.dequeueReusableCell(withIdentifier: "TVShowCell", for: indexPath) as! TVShowCell
+
+        cell.selectionStyle = .none
+
+        cell.fill(with: tvShowSelected as! TVShow)
+        cell.backgroundColor = UIColor.clear
+
+//        let backgroundView = UIView()
+//        backgroundView.backgroundColor = UIColor.blue
+//        cell.selectedBackgroundView = backgroundView
+
         return cell
-    }
-
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.tvShows.count
-    }
-
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-
-}
-
-extension MainViewModel : UICollectionViewDelegateFlowLayout {
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width - 40, height: 156)
     }
 
 }

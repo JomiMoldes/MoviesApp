@@ -20,24 +20,9 @@ class MainViewController: UIViewController {
 
     var searchController: UISearchController? = nil
     
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-//        MoviesService.search(query: "breaking", success: { searchResponse in
-//
-//            for i in searchResponse.results {
-//                print(i.name)
-//            }
-//            
-//        }, failure: { error in
-//            print(error)
-//        })
-        
-    }
-    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+
+
 }
