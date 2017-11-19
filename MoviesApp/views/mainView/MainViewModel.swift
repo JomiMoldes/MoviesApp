@@ -15,12 +15,45 @@ class MainViewModel : NSObject {
     func setup() {
         MoviesService.search(query: "breaking", success: {
             searchResponse in
-
+            
             self.tvShows.value = searchResponse.results
 
         }, failure: { error in
             print(error)
         })
+    }
+
+    fileprivate func loadImage(cell: TVShowCell, show: TVShow) {
+        let generation = cell.generation
+        let service = MALoadImageService(service: MAService(config: MAGlobalModels.sharedInstance.serviceConfig))
+
+        var defaultImage = true
+        var imagePath:String = "/1yeVJox3rjo2jBKrrihIMj7uoS9.jpg"
+        if let posterPath = show.posterPath {
+            defaultImage = false
+            imagePath = posterPath
+        }
+
+        MAGlobalModels.sharedInstance.assetsManager.loadImage(path: imagePath, size: 92, service: service).then {
+            image -> Void in
+
+            guard let icon = cell.thumbImageView,
+                  cell.generation == generation else {
+                return
+            }
+            
+            DispatchQueue.main.async {
+                guard let image = image else {
+                    icon.image = nil
+                    return
+                }
+                icon.alpha = defaultImage ? 0.1 : 1
+                icon.image = image
+            }
+        }.catch(policy: .allErrors) {
+            error in
+            print (error.localizedDescription)
+        }
     }
 
 }
@@ -60,9 +93,12 @@ extension MainViewModel : UITableViewDataSource {
         cell.fill(with: tvShowSelected as! TVShow)
         cell.backgroundColor = UIColor.clear
 
+        self.loadImage(cell: cell as! TVShowCell, show: tvShowSelected)
+
 //        let backgroundView = UIView()
 //        backgroundView.backgroundColor = UIColor.blue
 //        cell.selectedBackgroundView = backgroundView
+
 
         return cell
     }
