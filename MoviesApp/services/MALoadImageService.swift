@@ -20,7 +20,7 @@ class MALoadImageService : MALoadImageServiceProtocol{
         return Promise<UIImage?> {
             fulfill, reject in
 
-            let finalPath = self.service.config.createURLForImage(imageName: path, size: size)
+            let finalPath = MAGlobalModels.sharedInstance.serviceConfig.createPathForImage(imageName: path, size: size)
 
             let request = MARequest(requestType: .get, path: finalPath)
 
@@ -41,8 +41,6 @@ class MALoadImageService : MALoadImageServiceProtocol{
         }
 
     }
-
-
 
 }
 

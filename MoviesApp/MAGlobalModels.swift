@@ -10,7 +10,7 @@ class MAGlobalModels {
     static let sharedInstance = MAGlobalModels()
 
     let assetsManager : MAAssetsManager
-    let serviceConfig : MAServiceConfig
+    let serviceConfig : MAServiceConfigProtocol
 
     private init() {
         self.assetsManager = MAAssetsManager()

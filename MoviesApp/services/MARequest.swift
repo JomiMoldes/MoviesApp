@@ -25,7 +25,7 @@ class MARequest : MARequestProtocol {
                 let request = try URLRequest(url: URL(fileURLWithPath: self.path), method: self.method)
                 return request
             }catch {
-
+                print(MAServiceError.cannotCreateURL.localizedDescription)
             }
             return nil
         }

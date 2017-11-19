@@ -1,0 +1,61 @@
+{
+    "page": 1,
+    "total_results": 34,
+    "total_pages": 2,
+    "results": [
+        {
+            "original_name": "Breaking Bad",
+            "id": 1396,
+            "name": "Breaking Bad",
+            "vote_count": 2027,
+            "vote_average": 8.22,
+            "poster_path": "/1yeVJox3rjo2jBKrrihIMj7uoS9.jpg",
+            "first_air_date": "2008-01-19",
+            "popularity": 55.571805,
+            "genre_ids": [
+                18
+            ],
+            "original_language": "en",
+            "backdrop_path": "/bzoZjhbpriBT2N5kwgK0weUfVOX.jpg",
+            "overview": "Breaking Bad is an American crime drama television series created and produced by Vince Gilligan. Set and produced in Albuquerque, New Mexico, Breaking Bad is the story of Walter White, a struggling high school chemistry teacher who is diagnosed with inoperable lung cancer at the beginning of the series. He turns to a life of crime, producing and selling methamphetamine, in order to secure his family's financial future before he dies, teaming with his former student, Jesse Pinkman. Heavily serialized, the series is known for positioning its characters in seemingly inextricable corners and has been labeled a contemporary western by its creator.",
+            "origin_country": [
+                "US"
+            ]
+        },
+        {
+            "original_name": "Breaking In",
+            "id": 34541,
+            "name": "Breaking In",
+            "vote_count": 16,
+            "vote_average": 5.06,
+            "poster_path": "/m3SRLQjRgcdkgbLW02ZGerd9C9c.jpg",
+            "first_air_date": "2011-04-06",
+            "popularity": 4.163939,
+            "genre_ids": [
+                35,
+                10759
+            ],
+            "original_language": "en",
+            "backdrop_path": "/amUqExzg5eutOHshr0mbfs3lgbj.jpg",
+            "overview": "Contra Security is a high tech security firm that specializes in breaking in as a way to test security measures. The team members comprise various skills, and even more various personalities.",
+            "origin_country": [
+                "US"
+            ]
+        },
+        {
+            "original_name": "커플 브레이킹",
+            "id": 46568,
+            "name": "Couple Breaking",
+            "vote_count": 0,
+            "vote_average": 0,
+            "poster_path": "/4xuxJLbNyBenWGoXyEnqdY7TIN7.jpg",
+            "first_air_date": "2007-09-27",
+            "popularity": 1.003568,
+            "genre_ids": [],
+            "original_language": "ko",
+            "backdrop_path": null,
+            "overview": "",
+            "origin_country": []
+        }
+    ]
+}

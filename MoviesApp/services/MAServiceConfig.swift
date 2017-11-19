@@ -5,7 +5,7 @@
 
 import Foundation
 
-struct MAServiceConfig {
+struct MAServiceConfig : MAServiceConfigProtocol {
 
     static let BASE_URL : String = "https://api.themoviedb.org"
     static let API_KEY : String = "208ca80d1e219453796a7f9792d16776"
@@ -21,18 +21,26 @@ struct MAServiceConfig {
         self.imageBasePath = MAServiceConfig.IMAGE_BASE_URL
     }
 
-    func createUrl(for action: String, items: [String: String] = [:]) -> URL? {
+    func createPathForJSON(for action: String, items: [String: String]) -> String {
 
         var query = "?api_key=" + self.key
         items.forEach { query = query + "&" + $0 + "=" + $1 }
         let url = self.path + action + query
-        return URL(string: url)
+        return url
     }
 
-    func createURLForImage(imageName: String, size: Int) -> String {
+    func createPathForImage(imageName: String, size: Int) -> String {
         let path = self.imageBasePath + "/t/p/w\(size )\(imageName)"
         return path
     }
 
+
+}
+
+protocol MAServiceConfigProtocol  {
+
+    func createPathForJSON(for action: String, items: [String: String]) -> String
+
+    func createPathForImage(imageName: String, size: Int) -> String
 
 }

@@ -10,16 +10,10 @@ import PromiseKit
 
 class MAService : MAServiceProtocol {
 
-    var config : MAServiceConfig
-
-    init(config: MAServiceConfig) {
-        self.config = config
-    }
-
     func execute(_ request: MARequestProtocol,_ retry:Int?) -> Promise<DataResponse<Any>> {
         let operation = Promise<DataResponse<Any>> {
             fulfill, reject in
-            let url : URLConvertible = URL(string:self.config.path + request.path)!
+            let url : URLConvertible = URL(string:request.path)!
             Alamofire.request(url, method: request.method).responseJSON {
                 response in
 
@@ -67,8 +61,6 @@ class MAService : MAServiceProtocol {
 
 protocol MAServiceProtocol {
 
-    var config : MAServiceConfig { get set }
-
     func execute(_ request: MARequestProtocol,_ retry:Int?) -> Promise<DataResponse<Any>>
 
     func executeData(_ request: MARequestProtocol,_ retry:Int?) -> Promise<Data>
@@ -79,5 +71,7 @@ enum MAServiceError : Error {
     case noJSON
     case noImage
     case noData
+    case decodingMovies
+    case cannotCreateURL
 
 }

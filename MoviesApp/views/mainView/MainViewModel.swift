@@ -13,19 +13,22 @@ class MainViewModel : NSObject {
     var tvShows = Variable<[TVShow]>([TVShow]())
 
     func setup() {
-        MoviesService.search(query: "breaking", success: {
+
+        let moviesService = MoviesService(service: MAService())
+        moviesService.search(query: "breaking").then {
             searchResponse in
-            
+
             self.tvShows.value = searchResponse.results
 
-        }, failure: { error in
+        }.catch(policy: .allErrors) {
+            error in
             print(error)
-        })
+        }
     }
 
     fileprivate func loadImage(cell: TVShowCell, show: TVShow) {
         let generation = cell.generation
-        let service = MALoadImageService(service: MAService(config: MAGlobalModels.sharedInstance.serviceConfig))
+        let service = MALoadImageService(service: MAService())
 
         var defaultImage = true
         var imagePath:String = "/1yeVJox3rjo2jBKrrihIMj7uoS9.jpg"
