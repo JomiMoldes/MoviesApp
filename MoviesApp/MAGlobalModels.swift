@@ -12,11 +12,13 @@ class MAGlobalModels {
     let assetsManager : MAAssetsManager
     let serviceConfig : MAServiceConfigProtocol
     let genresModel : MAGenresModel
+    let flowController: MAFlowController
 
     private init() {
         self.assetsManager = MAAssetsManager()
         self.serviceConfig = MAServiceConfig()
         self.genresModel = MAGenresModel()
+        self.flowController = MAFlowController()
     }
 
 }

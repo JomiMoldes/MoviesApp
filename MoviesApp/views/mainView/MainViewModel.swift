@@ -7,6 +7,7 @@ import Foundation
 import UIKit
 import RxSwift
 import RxCocoa
+import PromiseKit
 
 class MainViewModel : NSObject {
 
@@ -31,12 +32,14 @@ class MainViewModel : NSObject {
         }
     }
 
+    //MARK - Private
+
     fileprivate func loadImage(cell: TVShowCell, show: TVShow) {
         let generation = cell.generation
         let service = MALoadImageService(service: MAService())
 
         var defaultImage = true
-        var imagePath:String = "/1yeVJox3rjo2jBKrrihIMj7uoS9.jpg"
+        var imagePath:String = MAServiceConfig.DEFAULT_THUMB_PATH
         if let posterPath = show.posterPath {
             defaultImage = false
             imagePath = posterPath
@@ -81,14 +84,68 @@ class MainViewModel : NSObject {
         return names
     }
 
+    fileprivate func showSelected(tvShow: TVShow, rect: CGRect) {
+
+        var posterImage: UIImage!
+
+        let posterPath = self.getFinalPosterPath(tvShow: tvShow)
+        let backImagePath = self.getFinalBackImagePath(tvShow: tvShow)
+
+        MALoadImageService(service: MAService()).execute(path: posterPath, size: 500).then {
+            image -> Promise<UIImage?> in
+
+            guard let image = image else {
+                return Promise<UIImage?>{
+                    fulfill, reject in
+                    reject(MAServiceError.noImage)
+                }
+            }
+
+            posterImage = image
+
+            return MALoadImageService(service: MAService()).execute(path: backImagePath, size: 1280)
+        }.then {
+            image -> Void in
+
+            MAGlobalModels.sharedInstance.flowController.gotoDetails(tvShow: tvShow, image: posterImage, rect: rect, backImage: image)
+            
+        }.catch(policy: .allErrors) {
+            error in
+            print(error)
+        }
+
+    }
+    fileprivate func getFinalBackImagePath(tvShow: TVShow) -> String {
+        var defaultImage = true
+        var imagePath:String = MAServiceConfig.DEFAULT_BACK_IMAGE_PATH
+        if let backPath = tvShow.backdropPath {
+            defaultImage = false
+            imagePath = backPath
+        }
+        return imagePath
+    }
+
+    fileprivate func getFinalPosterPath(tvShow: TVShow) -> String {
+        var defaultImage = true
+        var imagePath:String = MAServiceConfig.DEFAULT_THUMB_PATH
+        if let posterPath = tvShow.posterPath {
+            defaultImage = false
+            imagePath = posterPath
+        }
+        return imagePath
+    }
+
 }
 
 extension MainViewModel : UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) as? TVShowCell {
-//            cell.backgroundColor = UIColor.clear
-//            cell.contentView.backgroundColor = UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 0.3)
+            if let view = tableView.superview {
+                let pos = cell.convert(cell.thumbImageView.frame.origin, to: nil)
+                let rect = CGRect(origin: pos, size: cell.thumbImageView.frame.size)
+                self.showSelected(tvShow: cell.tvShow, rect: rect)
+            }
         }
     }
 
@@ -121,11 +178,6 @@ extension MainViewModel : UITableViewDataSource {
         cell.backgroundColor = UIColor.clear
 
         self.loadImage(cell: cell as! TVShowCell, show: tvShowSelected)
-
-//        let backgroundView = UIView()
-//        backgroundView.backgroundColor = UIColor.blue
-//        cell.selectedBackgroundView = backgroundView
-
 
         return cell
     }

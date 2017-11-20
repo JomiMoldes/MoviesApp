@@ -13,6 +13,9 @@ struct MAServiceConfig : MAServiceConfigProtocol {
     static let SEARCH_URI : String = "/3/search/tv"
     static let GENRES_LIST : String = "/3/genre/movie/list"
 
+    static let DEFAULT_THUMB_PATH : String = "/1yeVJox3rjo2jBKrrihIMj7uoS9.jpg"
+    static let DEFAULT_BACK_IMAGE_PATH : String = "/bzoZjhbpriBT2N5kwgK0weUfVOX.jpg"
+
     let path: String
     let key : String
     let imageBasePath : String
