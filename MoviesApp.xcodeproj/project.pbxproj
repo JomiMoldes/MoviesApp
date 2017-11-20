@@ -10,6 +10,8 @@
 		45BAF0CEB4407E5F98A34869 /* TVShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF61ECBC5573AB89EAD52 /* TVShowViewController.swift */; };
 		45BAF1C5A08708B4B17317AB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF4ECCA9931E973BA52FF /* MainView.swift */; };
 		45BAF3BC7E4B631A1280C38B /* MAServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF32815D1FDB10FCFB693 /* MAServiceTest.swift */; };
+		45BAF4D42838CAE135AD7D86 /* MAGenresService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAFC4D40AE9764E268A590 /* MAGenresService.swift */; };
+		45BAF6DF477BF8263E85DF60 /* MAGenresModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF62ABE9DA553F6AD57AF /* MAGenresModel.swift */; };
 		45BAF72AA5148F440EB2157D /* MAAssetsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAFFF326A6C7551B9610C3 /* MAAssetsManager.swift */; };
 		45BAF81BA04582C7F6AFD5FB /* MoviesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAFFD8D1E8E7604AFEE258 /* MoviesService.swift */; };
 		45BAFA1F253B9929A190FB94 /* MAGlobalModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF4F2C0E37BEBB3D33AC3 /* MAGlobalModels.swift */; };
@@ -63,10 +65,12 @@
 		45BAF4ECCA9931E973BA52FF /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		45BAF4F2C0E37BEBB3D33AC3 /* MAGlobalModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAGlobalModels.swift; sourceTree = "<group>"; };
 		45BAF61ECBC5573AB89EAD52 /* TVShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowViewController.swift; sourceTree = "<group>"; };
+		45BAF62ABE9DA553F6AD57AF /* MAGenresModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAGenresModel.swift; sourceTree = "<group>"; };
 		45BAF66E1A264112840FE9CC /* MALoadImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MALoadImageService.swift; sourceTree = "<group>"; };
 		45BAF8AD84179E7628875094 /* MARequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MARequest.swift; sourceTree = "<group>"; };
 		45BAF8EA1A523EAF93D1BA4F /* TVShowCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TVShowCellView.xib; sourceTree = "<group>"; };
 		45BAFC2C3815CD81FA01E669 /* TVShowCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowCell.swift; sourceTree = "<group>"; };
+		45BAFC4D40AE9764E268A590 /* MAGenresService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAGenresService.swift; sourceTree = "<group>"; };
 		45BAFCF2A372633109570FB0 /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		45BAFFD8D1E8E7604AFEE258 /* MoviesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesService.swift; sourceTree = "<group>"; };
 		45BAFFF326A6C7551B9610C3 /* MAAssetsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAAssetsManager.swift; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 				45BAF0743424B1D792C43784 /* MAServiceConfig.swift */,
 				45BAF3B68FAF51595FF06252 /* MAService.swift */,
 				45BAF8AD84179E7628875094 /* MARequest.swift */,
+				45BAFC4D40AE9764E268A590 /* MAGenresService.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -252,6 +257,7 @@
 				663FF7D11F1FA6C600CA0149 /* TVShow.swift */,
 				45BAFFF326A6C7551B9610C3 /* MAAssetsManager.swift */,
 				45BAF4F2C0E37BEBB3D33AC3 /* MAGlobalModels.swift */,
+				45BAF62ABE9DA553F6AD57AF /* MAGenresModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -557,6 +563,8 @@
 				45BAFFEF171995C876036822 /* MAService.swift in Sources */,
 				45BAFA1F253B9929A190FB94 /* MAGlobalModels.swift in Sources */,
 				45BAFDB0209E94F425F8FF40 /* MARequest.swift in Sources */,
+				45BAF4D42838CAE135AD7D86 /* MAGenresService.swift in Sources */,
+				45BAF6DF477BF8263E85DF60 /* MAGenresModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

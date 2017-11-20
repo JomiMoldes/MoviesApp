@@ -14,8 +14,13 @@ class MainViewModel : NSObject {
 
     func setup() {
 
+        let genresService = MAGenresService()
         let moviesService = MoviesService(service: MAService())
-        moviesService.search(query: "breaking").then {
+
+        genresService.execute().then {
+            success in
+            return moviesService.search(query: "breaking")
+        }.then {
             searchResponse in
 
             self.tvShows.value = searchResponse.results
@@ -59,6 +64,23 @@ class MainViewModel : NSObject {
         }
     }
 
+    fileprivate func getGenresNames(tvShow: TVShow) -> String {
+        var names = ""
+        var first = true
+        for id in tvShow.genres {
+            let genreName = MAGlobalModels.sharedInstance.genresModel.getGenreNameById(id: id)
+            guard genreName != "" else {
+                continue
+            }
+            if first == false {
+                names += " / "
+            }
+            names += genreName
+            first = false
+        }
+        return names
+    }
+
 }
 
 extension MainViewModel : UITableViewDelegate {
@@ -93,7 +115,10 @@ extension MainViewModel : UITableViewDataSource {
 
         cell.selectionStyle = .none
 
-        cell.fill(with: tvShowSelected as! TVShow)
+        let tvShow = tvShowSelected as! TVShow
+        let genreName = self.getGenresNames(tvShow: tvShow)
+
+        cell.fill(with: tvShow, genreNames: genreName)
         cell.backgroundColor = UIColor.clear
 
         self.loadImage(cell: cell as! TVShowCell, show: tvShowSelected)

@@ -15,8 +15,6 @@ class MoviesService {
     static let BASE_URL : String = "https://api.themoviedb.org/"
     static let API_KEY : String = "208ca80d1e219453796a7f9792d16776"
     
-    static let SEARCH_URI : String = "/3/search/tv"
-
     let service : MAServiceProtocol
 
     init(service: MAServiceProtocol) {
@@ -31,7 +29,7 @@ class MoviesService {
                 UIApplication.shared.isNetworkActivityIndicatorVisible = true
             }
 
-            let request = MARequest(requestType: .get, path: MAGlobalModels.sharedInstance.serviceConfig.createPathForJSON(for: MoviesService.SEARCH_URI, items: ["query": query]))
+            let request = MARequest(requestType: .get, path: MAGlobalModels.sharedInstance.serviceConfig.createPathForJSON(for: MAServiceConfig.SEARCH_URI, items: ["query": query]))
 
             self.service.execute(request, nil).then {
                 response -> Void in

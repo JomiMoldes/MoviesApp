@@ -23,11 +23,11 @@ class TVShowCell : UITableViewCell {
     var generation = 0
     weak var tvShow : TVShow!
     
-    func fill(with: TVShow) {
+    func fill(with: TVShow, genreNames: String) {
         self.tvShow = with
         self.generation += 1
         self.titleLabel.text = with.name
-        self.genreLabel.text = ""
+        self.genreLabel.text = genreNames
     }
     
 }

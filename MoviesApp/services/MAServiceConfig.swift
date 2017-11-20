@@ -10,6 +10,8 @@ struct MAServiceConfig : MAServiceConfigProtocol {
     static let BASE_URL : String = "https://api.themoviedb.org"
     static let API_KEY : String = "208ca80d1e219453796a7f9792d16776"
     static let IMAGE_BASE_URL : String = "https://image.tmdb.org"
+    static let SEARCH_URI : String = "/3/search/tv"
+    static let GENRES_LIST : String = "/3/genre/movie/list"
 
     let path: String
     let key : String
