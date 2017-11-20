@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		45BAF04EC8FBD0E6CDE55F11 /* MATVShowDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF98EF9DD7CC609B78DA2 /* MATVShowDetailsViewController.swift */; };
 		45BAF0CEB4407E5F98A34869 /* TVShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF61ECBC5573AB89EAD52 /* TVShowViewController.swift */; };
+		45BAF134CF38B46EAA1F2E7D /* MAPrepareImagesForDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF93DD7D89A493249B12C /* MAPrepareImagesForDetail.swift */; };
 		45BAF1C5A08708B4B17317AB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF4ECCA9931E973BA52FF /* MainView.swift */; };
 		45BAF2EFB8FF0AA2D703B37D /* MATVShowDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF56F6D9570BB31C84988 /* MATVShowDetailsView.swift */; };
 		45BAF3BC7E4B631A1280C38B /* MAServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF32815D1FDB10FCFB693 /* MAServiceTest.swift */; };
@@ -33,6 +34,9 @@
 		481A84041FC1B989000C2C21 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 481A84031FC1B989000C2C21 /* MainView.xib */; };
 		481A84081FC237C1000C2C21 /* Movies.json in Resources */ = {isa = PBXBuildFile; fileRef = 481A84071FC237C1000C2C21 /* Movies.json */; };
 		481A840A1FC24ECE000C2C21 /* testImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 481A84091FC24ECD000C2C21 /* testImage.jpg */; };
+		482DBBDC1FC3490F00F4EE34 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482DBBDB1FC3490F00F4EE34 /* UIImageExtensions.swift */; };
+		482DBBE21FC37DDD00F4EE34 /* LEColorPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 482DBBDF1FC37DDC00F4EE34 /* LEColorPicker.m */; };
+		482DBBE31FC37DDD00F4EE34 /* UIColor+YUVSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 482DBBE11FC37DDC00F4EE34 /* UIColor+YUVSpace.m */; };
 		48A459B41FC31A5F00ED5B5D /* MATVShowDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48A459B31FC31A5F00ED5B5D /* MATVShowDetailsView.xib */; };
 		663FF7A11F1F9AF800CA0149 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663FF7A01F1F9AF800CA0149 /* AppDelegate.swift */; };
 		663FF7A81F1F9AF800CA0149 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 663FF7A71F1F9AF800CA0149 /* Assets.xcassets */; };
@@ -80,6 +84,7 @@
 		45BAF66E1A264112840FE9CC /* MALoadImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MALoadImageService.swift; sourceTree = "<group>"; };
 		45BAF8AD84179E7628875094 /* MARequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MARequest.swift; sourceTree = "<group>"; };
 		45BAF8EA1A523EAF93D1BA4F /* TVShowCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TVShowCellView.xib; sourceTree = "<group>"; };
+		45BAF93DD7D89A493249B12C /* MAPrepareImagesForDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAPrepareImagesForDetail.swift; sourceTree = "<group>"; };
 		45BAF98EF9DD7CC609B78DA2 /* MATVShowDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MATVShowDetailsViewController.swift; sourceTree = "<group>"; };
 		45BAF9EF84FF1113A0F0872C /* MAFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAFlowController.swift; sourceTree = "<group>"; };
 		45BAFC2C3815CD81FA01E669 /* TVShowCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowCell.swift; sourceTree = "<group>"; };
@@ -90,6 +95,12 @@
 		481A84031FC1B989000C2C21 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
 		481A84071FC237C1000C2C21 /* Movies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Movies.json; sourceTree = "<group>"; };
 		481A84091FC24ECD000C2C21 /* testImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testImage.jpg; sourceTree = "<group>"; };
+		482DBBDB1FC3490F00F4EE34 /* UIImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
+		482DBBDE1FC37DDC00F4EE34 /* LEColorPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEColorPicker.h; sourceTree = "<group>"; };
+		482DBBDF1FC37DDC00F4EE34 /* LEColorPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEColorPicker.m; sourceTree = "<group>"; };
+		482DBBE01FC37DDC00F4EE34 /* UIColor+YUVSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+YUVSpace.h"; sourceTree = "<group>"; };
+		482DBBE11FC37DDC00F4EE34 /* UIColor+YUVSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+YUVSpace.m"; sourceTree = "<group>"; };
+		482DBBE71FC37F7B00F4EE34 /* ObjCHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCHeader.h; sourceTree = "<group>"; };
 		48A459B31FC31A5F00ED5B5D /* MATVShowDetailsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MATVShowDetailsView.xib; sourceTree = "<group>"; };
 		663FF79D1F1F9AF800CA0149 /* MoviesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		663FF7A01F1F9AF800CA0149 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -186,6 +197,7 @@
 				45BAF3B68FAF51595FF06252 /* MAService.swift */,
 				45BAF8AD84179E7628875094 /* MARequest.swift */,
 				45BAFC4D40AE9764E268A590 /* MAGenresService.swift */,
+				45BAF93DD7D89A493249B12C /* MAPrepareImagesForDetail.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -212,6 +224,7 @@
 		45BAF3698C8B3B4167579DDE /* extensions */ = {
 			isa = PBXGroup;
 			children = (
+				482DBBDB1FC3490F00F4EE34 /* UIImageExtensions.swift */,
 				45BAF532352648E95598B54C /* UILabelExtensions.swift */,
 			);
 			path = extensions;
@@ -226,6 +239,18 @@
 				45BAF9EF84FF1113A0F0872C /* MAFlowController.swift */,
 			);
 			path = uicontrollers;
+			sourceTree = "<group>";
+		};
+		482DBBDD1FC37DDC00F4EE34 /* LEColorPicker */ = {
+			isa = PBXGroup;
+			children = (
+				482DBBDE1FC37DDC00F4EE34 /* LEColorPicker.h */,
+				482DBBDF1FC37DDC00F4EE34 /* LEColorPicker.m */,
+				482DBBE01FC37DDC00F4EE34 /* UIColor+YUVSpace.h */,
+				482DBBE11FC37DDC00F4EE34 /* UIColor+YUVSpace.m */,
+			);
+			name = LEColorPicker;
+			path = "../../../../../Downloads/LEColorPicker-master/LEColorPicker";
 			sourceTree = "<group>";
 		};
 		54FB5D857DA94396AAE89F38 /* Frameworks */ = {
@@ -262,6 +287,7 @@
 		663FF79F1F1F9AF800CA0149 /* MoviesApp */ = {
 			isa = PBXGroup;
 			children = (
+				482DBBDD1FC37DDC00F4EE34 /* LEColorPicker */,
 				663FF7CE1F1F9BB000CA0149 /* Models */,
 				663FF7A01F1F9AF800CA0149 /* AppDelegate.swift */,
 				663FF7A71F1F9AF800CA0149 /* Assets.xcassets */,
@@ -270,6 +296,7 @@
 				45BAFF8EF2BA768056529C7B /* uicontrollers */,
 				45BAF0B3D15050660C4045B8 /* views */,
 				45BAF193C33ED05923F4FFF6 /* services */,
+				482DBBE71FC37F7B00F4EE34 /* ObjCHeader.h */,
 			);
 			path = MoviesApp;
 			sourceTree = "<group>";
@@ -545,6 +572,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MoviesAppTests/Pods-MoviesAppTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ColorThiefSwift/ColorThiefSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -553,6 +581,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ColorThiefSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -571,6 +600,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MoviesApp/Pods-MoviesApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ColorThiefSwift/ColorThiefSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -578,6 +608,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ColorThiefSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -603,6 +634,7 @@
 				45BAFA220256CC4A07F5E3F7 /* TVShowCell.swift in Sources */,
 				45BAF1C5A08708B4B17317AB /* MainView.swift in Sources */,
 				45BAFD76D1826AFC0413B12A /* MainViewModel.swift in Sources */,
+				482DBBDC1FC3490F00F4EE34 /* UIImageExtensions.swift in Sources */,
 				45BAF72AA5148F440EB2157D /* MAAssetsManager.swift in Sources */,
 				45BAFE264EE138C2C27AC3FE /* MALoadImageService.swift in Sources */,
 				45BAFFFEB5A3283225502B7C /* MAServiceConfig.swift in Sources */,
@@ -610,13 +642,16 @@
 				45BAFA1F253B9929A190FB94 /* MAGlobalModels.swift in Sources */,
 				45BAFDB0209E94F425F8FF40 /* MARequest.swift in Sources */,
 				45BAF4D42838CAE135AD7D86 /* MAGenresService.swift in Sources */,
+				482DBBE31FC37DDD00F4EE34 /* UIColor+YUVSpace.m in Sources */,
 				45BAF6DF477BF8263E85DF60 /* MAGenresModel.swift in Sources */,
 				45BAF7CB056E3D1ED1C94EAA /* MAShowCellButton.swift in Sources */,
 				45BAFF0364F5D25BF9A919ED /* UILabelExtensions.swift in Sources */,
 				45BAF2EFB8FF0AA2D703B37D /* MATVShowDetailsView.swift in Sources */,
 				45BAFDBC3E030C180BD0FF04 /* MATVShowDetailsViewModel.swift in Sources */,
+				482DBBE21FC37DDD00F4EE34 /* LEColorPicker.m in Sources */,
 				45BAF04EC8FBD0E6CDE55F11 /* MATVShowDetailsViewController.swift in Sources */,
 				45BAFF878BB34BF79ACA7727 /* MAFlowController.swift in Sources */,
+				45BAF134CF38B46EAA1F2E7D /* MAPrepareImagesForDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -784,6 +819,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.MoviesApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/MiguelMoldes/Documents/workspace/MoviesApp/MoviesApp/MoviesApp/ObjCHeader.h;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -801,6 +837,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.MoviesApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/MiguelMoldes/Documents/workspace/MoviesApp/MoviesApp/MoviesApp/ObjCHeader.h;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -13,6 +13,8 @@ class MainViewModel : NSObject {
 
     var tvShows = Variable<[TVShow]>([TVShow]())
 
+    var activityIndicator = PublishSubject<Bool>()
+
     func setup() {
 
         let genresService = MAGenresService()
@@ -86,53 +88,17 @@ class MainViewModel : NSObject {
 
     fileprivate func showSelected(tvShow: TVShow, rect: CGRect) {
 
-        var posterImage: UIImage!
+        activityIndicator.onNext(true)
 
-        let posterPath = self.getFinalPosterPath(tvShow: tvShow)
-        let backImagePath = self.getFinalBackImagePath(tvShow: tvShow)
+        MAPrepareImagesForDetail().prepare(tvShow: tvShow, rect: rect).then {
+            success in
 
-        MALoadImageService(service: MAService()).execute(path: posterPath, size: 500).then {
-            image -> Promise<UIImage?> in
-
-            guard let image = image else {
-                return Promise<UIImage?>{
-                    fulfill, reject in
-                    reject(MAServiceError.noImage)
-                }
-            }
-
-            posterImage = image
-
-            return MALoadImageService(service: MAService()).execute(path: backImagePath, size: 1280)
-        }.then {
-            image -> Void in
-
-            MAGlobalModels.sharedInstance.flowController.gotoDetails(tvShow: tvShow, image: posterImage, rect: rect, backImage: image)
-            
+            self.activityIndicator.onNext(false)
         }.catch(policy: .allErrors) {
             error in
-            print(error)
+            self.activityIndicator.onNext(false)
         }
 
-    }
-    fileprivate func getFinalBackImagePath(tvShow: TVShow) -> String {
-        var defaultImage = true
-        var imagePath:String = MAServiceConfig.DEFAULT_BACK_IMAGE_PATH
-        if let backPath = tvShow.backdropPath {
-            defaultImage = false
-            imagePath = backPath
-        }
-        return imagePath
-    }
-
-    fileprivate func getFinalPosterPath(tvShow: TVShow) -> String {
-        var defaultImage = true
-        var imagePath:String = MAServiceConfig.DEFAULT_THUMB_PATH
-        if let posterPath = tvShow.posterPath {
-            defaultImage = false
-            imagePath = posterPath
-        }
-        return imagePath
     }
 
 }
@@ -141,17 +107,9 @@ extension MainViewModel : UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) as? TVShowCell {
-            if let view = tableView.superview {
-                let pos = cell.convert(cell.thumbImageView.frame.origin, to: nil)
-                let rect = CGRect(origin: pos, size: cell.thumbImageView.frame.size)
-                self.showSelected(tvShow: cell.tvShow, rect: rect)
-            }
-        }
-    }
-
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        if let cell = tableView.cellForRow(at: indexPath) {
-//            cell.contentView.backgroundColor = UIColor.white
+            let pos = cell.convert(cell.thumbImageView.frame.origin, to: nil)
+            let rect = CGRect(origin: pos, size: cell.thumbImageView.frame.size)
+            self.showSelected(tvShow: cell.tvShow, rect: rect)
         }
     }
 
@@ -166,18 +124,17 @@ extension MainViewModel : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : TVShowCell!
 
-        let tvShowSelected = self.tvShows.value[(indexPath as NSIndexPath).item]
+        let tvShow = self.tvShows.value[(indexPath as NSIndexPath).item]
         cell = tableView.dequeueReusableCell(withIdentifier: "TVShowCell", for: indexPath) as! TVShowCell
 
         cell.selectionStyle = .none
 
-        let tvShow = tvShowSelected as! TVShow
         let genreName = self.getGenresNames(tvShow: tvShow)
 
         cell.fill(with: tvShow, genreNames: genreName.uppercased())
         cell.backgroundColor = UIColor.clear
 
-        self.loadImage(cell: cell as! TVShowCell, show: tvShowSelected)
+        self.loadImage(cell: cell, show: tvShow)
 
         return cell
     }

@@ -21,11 +21,11 @@ class MAFlowController : MAFlowControllerProtocol {
         self.navController = UINavigationController(rootViewController: self.createInitialVC())
     }
 
-    func gotoDetails(tvShow: TVShow, image: UIImage, rect: CGRect, backImage: UIImage?) {
+    func gotoDetails(tvShow: TVShow, image: UIImage, rect: CGRect, backgroundColor: UIColor, backImage: UIImage?) {
         let vc = MATVShowDetailsViewController(nibName: "MATVShowDetailsView", bundle: nil)
         vc.modalPresentationStyle = .overCurrentContext
 
-        vc.customView.model = MATVShowDetailsViewModel(tvShow: tvShow, image: image, imageRect: rect, backImage: backImage)
+        vc.customView.model = MATVShowDetailsViewModel(tvShow: tvShow, image: image, imageRect: rect, backgroundColor: backgroundColor, backImage: backImage)
         self.navController.present(vc, animated: false)
     }
 
@@ -37,7 +37,6 @@ class MAFlowController : MAFlowControllerProtocol {
         let vc = MainViewController(nibName: "MainView", bundle: nil)
         vc.customView.model = MainViewModel()
 
-//        self.initialVC = initialViewController
         return vc
     }
 

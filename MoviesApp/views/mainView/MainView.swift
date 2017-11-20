@@ -17,6 +17,8 @@ class MainView : UIView {
         }
     }
 
+    var activityIndicator : UIActivityIndicatorView?
+
     fileprivate var tvShowsTableView : UITableView!
 
     private let disposeBag = DisposeBag()
@@ -30,6 +32,34 @@ class MainView : UIView {
             }
         }).disposed(by: self.disposeBag)
 
+        self.model.activityIndicator.asObservable().subscribe(onNext: {
+            [unowned self] show in
+            DispatchQueue.main.async {
+                self.showActivityIndicator(show: show)
+            }
+        }).disposed(by: self.disposeBag)
+
+    }
+
+    fileprivate func showActivityIndicator(show: Bool) {
+        if self.activityIndicator == nil {
+            self.activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+            self.addSubview(self.activityIndicator!)
+        }
+
+        guard let indicator = self.activityIndicator else {
+            return 
+        }
+
+        indicator.isHidden = show ? false : true
+        guard show == true else {
+            indicator.stopAnimating()
+            return
+        }
+
+        indicator.center = self.center
+        indicator.hidesWhenStopped = false
+        indicator.startAnimating()
     }
 
     fileprivate func setup() {

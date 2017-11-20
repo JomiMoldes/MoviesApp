@@ -12,14 +12,14 @@ class MATVShowDetailsViewModel {
     let image: UIImage
     let backImage: UIImage?
     let imageRect: CGRect
+    let backgroundColor: UIColor
 
-    init(tvShow: TVShow, image: UIImage, imageRect: CGRect, backImage: UIImage?) {
+    init(tvShow: TVShow, image: UIImage, imageRect: CGRect, backgroundColor: UIColor, backImage: UIImage?) {
         self.tvShow = tvShow
         self.image = image
         self.backImage = backImage
         self.imageRect = imageRect
+        self.backgroundColor = backgroundColor
     }
-
-
 
 }

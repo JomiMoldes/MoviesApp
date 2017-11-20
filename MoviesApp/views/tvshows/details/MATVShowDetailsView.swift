@@ -5,11 +5,15 @@
 
 import Foundation
 import UIKit
+import ColorThiefSwift
+
+
 
 class MATVShowDetailsView : UIView {
 
     @IBOutlet weak var thumbnailView: UIImageView!
     @IBOutlet weak var backgroundImageView: UIImageView!
+    @IBOutlet weak var bgView: UIView!
     
     var model : MATVShowDetailsViewModel! {
         didSet {
@@ -29,7 +33,8 @@ class MATVShowDetailsView : UIView {
             self.thumbnailView.frame.origin.y = self.frame.size.height * 0.27 - finalHeight / 2
             self.thumbnailView.frame.size.width = finalWidth
             self.thumbnailView.frame.size.height = finalHeight
-            self.backgroundImageView.alpha = 1.0
+            self.backgroundImageView.alpha = 0.1
+            self.bgView.alpha = 1.0
         }, completion: nil)
 
     }
@@ -48,6 +53,11 @@ class MATVShowDetailsView : UIView {
 
         self.backgroundImageView.alpha = 0.0
         self.backgroundImageView.image = model.backImage
+        
+        self.backgroundImageView.image = self.model.backImage?.tint(with: UIColor.black, blendMode: .color)
+        
+        self.bgView.backgroundColor = self.model.backgroundColor
+
     }
 
     @IBAction func goBack(_ sender: UIButton) {
