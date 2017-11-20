@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,16 +15,16 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MATVShowDetailsView" customModule="MoviesApp" customModuleProvider="target">
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="MATVShowDetailsView" customModule="MoviesApp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XkO-J6-RZP" userLabel="BackgroundView">
-                    <rect key="frame" x="-0.5" y="10" width="375" height="667"/>
+                    <rect key="frame" x="-0.5" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" red="0.94099999999999995" green="0.72549019607843135" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SKJ-XM-Jnr" userLabel="BackgroundImage">
-                    <rect key="frame" x="-0.5" y="10" width="375" height="667"/>
+                    <rect key="frame" x="-0.5" y="0.0" width="375" height="667"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="utj-0S-QrW">
                     <rect key="frame" x="56.5" y="146.5" width="262.5" height="394"/>
@@ -43,15 +42,14 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="SKJ-XM-Jnr" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="7Dg-Q5-16C"/>
-                <constraint firstItem="XkO-J6-RZP" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="ATp-Vc-y3W"/>
+                <constraint firstItem="XkO-J6-RZP" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ATp-Vc-y3W"/>
                 <constraint firstItem="XkO-J6-RZP" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="NIv-rd-zRp"/>
                 <constraint firstItem="SKJ-XM-Jnr" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="TWN-tc-hS2"/>
-                <constraint firstItem="XkO-J6-RZP" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="YPO-eF-WTT"/>
-                <constraint firstItem="SKJ-XM-Jnr" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="dMA-SX-thI"/>
+                <constraint firstItem="XkO-J6-RZP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="YPO-eF-WTT"/>
+                <constraint firstItem="SKJ-XM-Jnr" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="dMA-SX-thI"/>
                 <constraint firstItem="XkO-J6-RZP" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="dkb-hB-3Np"/>
-                <constraint firstItem="SKJ-XM-Jnr" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="gn5-7P-cc6"/>
+                <constraint firstItem="SKJ-XM-Jnr" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="gn5-7P-cc6"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="backgroundImageView" destination="SKJ-XM-Jnr" id="yfE-QT-12W"/>
                 <outlet property="bgView" destination="XkO-J6-RZP" id="dAx-yZ-z38"/>
