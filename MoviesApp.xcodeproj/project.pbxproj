@@ -13,6 +13,7 @@
 		45BAF4D42838CAE135AD7D86 /* MAGenresService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAFC4D40AE9764E268A590 /* MAGenresService.swift */; };
 		45BAF6DF477BF8263E85DF60 /* MAGenresModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF62ABE9DA553F6AD57AF /* MAGenresModel.swift */; };
 		45BAF72AA5148F440EB2157D /* MAAssetsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAFFF326A6C7551B9610C3 /* MAAssetsManager.swift */; };
+		45BAF7CB056E3D1ED1C94EAA /* MAShowCellButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF4F6025DF4A1F56B704D /* MAShowCellButton.swift */; };
 		45BAF81BA04582C7F6AFD5FB /* MoviesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAFFD8D1E8E7604AFEE258 /* MoviesService.swift */; };
 		45BAFA1F253B9929A190FB94 /* MAGlobalModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF4F2C0E37BEBB3D33AC3 /* MAGlobalModels.swift */; };
 		45BAFA220256CC4A07F5E3F7 /* TVShowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAFC2C3815CD81FA01E669 /* TVShowCell.swift */; };
@@ -22,6 +23,7 @@
 		45BAFDC309F1376E564F7E88 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF33D0DA031754BED03E3 /* MainViewController.swift */; };
 		45BAFE264EE138C2C27AC3FE /* MALoadImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF66E1A264112840FE9CC /* MALoadImageService.swift */; };
 		45BAFE83F8B913B771A554C3 /* MALoadImageServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF27C909BE039952356B0 /* MALoadImageServiceTest.swift */; };
+		45BAFF0364F5D25BF9A919ED /* UILabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF532352648E95598B54C /* UILabelExtensions.swift */; };
 		45BAFFEF171995C876036822 /* MAService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF3B68FAF51595FF06252 /* MAService.swift */; };
 		45BAFFFEB5A3283225502B7C /* MAServiceConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF0743424B1D792C43784 /* MAServiceConfig.swift */; };
 		481A84041FC1B989000C2C21 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 481A84031FC1B989000C2C21 /* MainView.xib */; };
@@ -64,6 +66,8 @@
 		45BAF3B68FAF51595FF06252 /* MAService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAService.swift; sourceTree = "<group>"; };
 		45BAF4ECCA9931E973BA52FF /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		45BAF4F2C0E37BEBB3D33AC3 /* MAGlobalModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAGlobalModels.swift; sourceTree = "<group>"; };
+		45BAF4F6025DF4A1F56B704D /* MAShowCellButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAShowCellButton.swift; sourceTree = "<group>"; };
+		45BAF532352648E95598B54C /* UILabelExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelExtensions.swift; sourceTree = "<group>"; };
 		45BAF61ECBC5573AB89EAD52 /* TVShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowViewController.swift; sourceTree = "<group>"; };
 		45BAF62ABE9DA553F6AD57AF /* MAGenresModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAGenresModel.swift; sourceTree = "<group>"; };
 		45BAF66E1A264112840FE9CC /* MALoadImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MALoadImageService.swift; sourceTree = "<group>"; };
@@ -134,11 +138,21 @@
 			path = mainView;
 			sourceTree = "<group>";
 		};
+		45BAF0810815E12A4807EBA1 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				45BAF4F6025DF4A1F56B704D /* MAShowCellButton.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
 		45BAF0B3D15050660C4045B8 /* views */ = {
 			isa = PBXGroup;
 			children = (
 				45BAF03697D71E502B7D0170 /* mainView */,
 				45BAF1B96918F506F0D7C9BD /* tvshows */,
+				45BAF0810815E12A4807EBA1 /* components */,
+				45BAF3698C8B3B4167579DDE /* extensions */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -172,6 +186,14 @@
 				45BAF27C909BE039952356B0 /* MALoadImageServiceTest.swift */,
 			);
 			path = services;
+			sourceTree = "<group>";
+		};
+		45BAF3698C8B3B4167579DDE /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				45BAF532352648E95598B54C /* UILabelExtensions.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 		45BAFF8EF2BA768056529C7B /* uicontrollers */ = {
@@ -565,6 +587,8 @@
 				45BAFDB0209E94F425F8FF40 /* MARequest.swift in Sources */,
 				45BAF4D42838CAE135AD7D86 /* MAGenresService.swift in Sources */,
 				45BAF6DF477BF8263E85DF60 /* MAGenresModel.swift in Sources */,
+				45BAF7CB056E3D1ED1C94EAA /* MAShowCellButton.swift in Sources */,
+				45BAFF0364F5D25BF9A919ED /* UILabelExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

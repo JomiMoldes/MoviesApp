@@ -89,7 +89,6 @@ extension MainViewModel : UITableViewDelegate {
         if let cell = tableView.cellForRow(at: indexPath) as? TVShowCell {
 //            cell.backgroundColor = UIColor.clear
 //            cell.contentView.backgroundColor = UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 0.3)
-//            self.selectedRow(installment: installment)
         }
     }
 
@@ -118,7 +117,7 @@ extension MainViewModel : UITableViewDataSource {
         let tvShow = tvShowSelected as! TVShow
         let genreName = self.getGenresNames(tvShow: tvShow)
 
-        cell.fill(with: tvShow, genreNames: genreName)
+        cell.fill(with: tvShow, genreNames: genreName.uppercased())
         cell.backgroundColor = UIColor.clear
 
         self.loadImage(cell: cell as! TVShowCell, show: tvShowSelected)

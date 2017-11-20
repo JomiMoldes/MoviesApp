@@ -28,6 +28,12 @@ class TVShowCell : UITableViewCell {
         self.generation += 1
         self.titleLabel.text = with.name
         self.genreLabel.text = genreNames
+
+        self.titleLabel.addCharacterSpacing(value:-0.19)
+        self.genreLabel.addCharacterSpacing(value:-0.19)
+
+        self.thumbImageView.layer.cornerRadius = 4.0
+        self.thumbImageView.clipsToBounds = true
     }
     
 }

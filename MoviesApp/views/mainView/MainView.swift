@@ -52,7 +52,7 @@ class MainView : UIView {
             tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
 
-        tableView.rowHeight = 100.0
+        tableView.rowHeight = 92.0
         tableView.register(UINib(nibName: "TVShowCellView", bundle: nil), forCellReuseIdentifier: "TVShowCell")
         tableView.dataSource = model
         tableView.delegate = model
