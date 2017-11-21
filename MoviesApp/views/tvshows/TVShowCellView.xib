@@ -26,16 +26,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LJF-b9-wZR" userLabel="Labels">
-                        <rect key="frame" x="88" y="5" width="205" height="89.5"/>
+                        <rect key="frame" x="87.5" y="5" width="205.5" height="89.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8NK-1y-BYG" userLabel="TitleLabel">
-                                <rect key="frame" x="0.0" y="22.5" width="205" height="21"/>
+                                <rect key="frame" x="0.0" y="22.5" width="205.5" height="21"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="xTz-aE-vjg" userLabel="GenreLabel">
-                                <rect key="frame" x="0.0" y="48.5" width="205" height="15"/>
+                                <rect key="frame" x="0.0" y="48.5" width="205.5" height="15"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="0.3962703339041096" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -62,13 +62,13 @@
                         </state>
                     </button>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZBX-Rt-OEo">
-                        <rect key="frame" x="16" y="9.5" width="54" height="80.5"/>
+                        <rect key="frame" x="16" y="10" width="53.5" height="79.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="ZBX-Rt-OEo" secondAttribute="height" multiplier="2:3" id="qfB-Hi-pKi"/>
                         </constraints>
                     </imageView>
                     <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yw0-zn-4Dr" userLabel="Line">
-                        <rect key="frame" x="90" y="97.5" width="324" height="1"/>
+                        <rect key="frame" x="89.5" y="97.5" width="324.5" height="1"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="ul8-Et-fzb"/>
@@ -80,7 +80,7 @@
                     <constraint firstItem="jbJ-r5-vKT" firstAttribute="width" secondItem="clv-Io-rTR" secondAttribute="width" multiplier="0.21" id="7rc-d5-A6s"/>
                     <constraint firstAttribute="bottom" secondItem="yw0-zn-4Dr" secondAttribute="bottom" constant="1" id="9js-S1-6IC"/>
                     <constraint firstItem="ZBX-Rt-OEo" firstAttribute="leading" secondItem="clv-Io-rTR" secondAttribute="leading" constant="16" id="CdF-Wh-WxL"/>
-                    <constraint firstItem="ZBX-Rt-OEo" firstAttribute="width" secondItem="clv-Io-rTR" secondAttribute="width" multiplier="0.13" id="J44-qh-tv7"/>
+                    <constraint firstItem="ZBX-Rt-OEo" firstAttribute="height" secondItem="clv-Io-rTR" secondAttribute="height" multiplier="0.8" id="QxX-0r-5Wf"/>
                     <constraint firstItem="yw0-zn-4Dr" firstAttribute="leading" secondItem="ZBX-Rt-OEo" secondAttribute="trailing" constant="20" id="Zqb-lt-AVR"/>
                     <constraint firstAttribute="trailing" secondItem="jbJ-r5-vKT" secondAttribute="trailing" constant="19" id="blD-fv-TjM"/>
                     <constraint firstAttribute="trailing" secondItem="yw0-zn-4Dr" secondAttribute="trailing" id="dHc-kE-U43"/>
