@@ -65,10 +65,13 @@
                     <rect key="frame" x="56.5" y="146.5" width="262.5" height="394"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3e-aS-HPL">
-                    <rect key="frame" x="16" y="20" width="46" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Back"/>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3e-aS-HPL">
+                    <rect key="frame" x="10" y="22" width="36" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="Fbu-GD-lf7"/>
+                        <constraint firstAttribute="width" constant="36" id="XFa-Ha-Xf1"/>
+                    </constraints>
+                    <state key="normal" image="BackButton.png"/>
                     <connections>
                         <action selector="goBack:" destination="iN0-l3-epB" eventType="touchUpInside" id="5KH-My-53z"/>
                     </connections>
@@ -87,11 +90,13 @@
                 <constraint firstItem="SKJ-XM-Jnr" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="TWN-tc-hS2"/>
                 <constraint firstItem="zfv-d5-5tp" firstAttribute="height" relation="lessThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.2" id="Uzf-a4-xlP"/>
                 <constraint firstItem="XkO-J6-RZP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="YPO-eF-WTT"/>
+                <constraint firstItem="G3e-aS-HPL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="c4r-Aw-Ymv"/>
                 <constraint firstItem="SKJ-XM-Jnr" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="dMA-SX-thI"/>
                 <constraint firstItem="XkO-J6-RZP" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="dkb-hB-3Np"/>
                 <constraint firstItem="SKJ-XM-Jnr" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="gn5-7P-cc6"/>
                 <constraint firstItem="bIW-xw-nf3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="3.5" id="nWi-8U-Mix"/>
                 <constraint firstItem="zfv-d5-5tp" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="0.65" id="q92-fZ-3Td"/>
+                <constraint firstItem="G3e-aS-HPL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="22" id="skn-ng-gB8"/>
                 <constraint firstItem="bIW-xw-nf3" firstAttribute="height" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.07" id="uRf-Vp-sjN"/>
             </constraints>
             <connections>
@@ -106,4 +111,7 @@
             <point key="canvasLocation" x="25.5" y="51.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="BackButton.png" width="36" height="36"/>
+    </resources>
 </document>

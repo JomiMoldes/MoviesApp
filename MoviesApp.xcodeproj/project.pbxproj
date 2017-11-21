@@ -40,6 +40,7 @@
 		482DBBDC1FC3490F00F4EE34 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482DBBDB1FC3490F00F4EE34 /* UIImageExtensions.swift */; };
 		482DBBE21FC37DDD00F4EE34 /* LEColorPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 482DBBDF1FC37DDC00F4EE34 /* LEColorPicker.m */; };
 		482DBBE31FC37DDD00F4EE34 /* UIColor+YUVSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 482DBBE11FC37DDC00F4EE34 /* UIColor+YUVSpace.m */; };
+		486BC58C1FC436490052226A /* BackButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 486BC58B1FC436490052226A /* BackButton.png */; };
 		48A459B41FC31A5F00ED5B5D /* MATVShowDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48A459B31FC31A5F00ED5B5D /* MATVShowDetailsView.xib */; };
 		663FF7A11F1F9AF800CA0149 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663FF7A01F1F9AF800CA0149 /* AppDelegate.swift */; };
 		663FF7A81F1F9AF800CA0149 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 663FF7A71F1F9AF800CA0149 /* Assets.xcassets */; };
@@ -107,6 +108,7 @@
 		482DBBE01FC37DDC00F4EE34 /* UIColor+YUVSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+YUVSpace.h"; sourceTree = "<group>"; };
 		482DBBE11FC37DDC00F4EE34 /* UIColor+YUVSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+YUVSpace.m"; sourceTree = "<group>"; };
 		482DBBE71FC37F7B00F4EE34 /* ObjCHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCHeader.h; sourceTree = "<group>"; };
+		486BC58B1FC436490052226A /* BackButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackButton.png; sourceTree = "<group>"; };
 		48A459B31FC31A5F00ED5B5D /* MATVShowDetailsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MATVShowDetailsView.xib; sourceTree = "<group>"; };
 		663FF79D1F1F9AF800CA0149 /* MoviesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		663FF7A01F1F9AF800CA0149 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -262,6 +264,14 @@
 			path = "../../../../../Downloads/LEColorPicker-master/LEColorPicker";
 			sourceTree = "<group>";
 		};
+		486BC58A1FC436490052226A /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				486BC58B1FC436490052226A /* BackButton.png */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
 		54FB5D857DA94396AAE89F38 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -296,6 +306,7 @@
 		663FF79F1F1F9AF800CA0149 /* MoviesApp */ = {
 			isa = PBXGroup;
 			children = (
+				486BC58A1FC436490052226A /* resources */,
 				482DBBDD1FC37DDC00F4EE34 /* LEColorPicker */,
 				663FF7CE1F1F9BB000CA0149 /* Models */,
 				663FF7A01F1F9AF800CA0149 /* AppDelegate.swift */,
@@ -482,6 +493,7 @@
 			files = (
 				481A84041FC1B989000C2C21 /* MainView.xib in Resources */,
 				663FF7AB1F1F9AF800CA0149 /* LaunchScreen.storyboard in Resources */,
+				486BC58C1FC436490052226A /* BackButton.png in Resources */,
 				48A459B41FC31A5F00ED5B5D /* MATVShowDetailsView.xib in Resources */,
 				663FF7A81F1F9AF800CA0149 /* Assets.xcassets in Resources */,
 				45BAFBB598177B8725D6B5B2 /* TVShowCellView.xib in Resources */,
