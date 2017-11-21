@@ -16,6 +16,7 @@ class MATVShowDetailsView : UIView {
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var titleView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subscribeButton: MASubscribeButton!
     @IBOutlet weak var titleViewYConstraint: NSLayoutConstraint!
     
     
@@ -64,6 +65,7 @@ class MATVShowDetailsView : UIView {
         
         self.bgView.backgroundColor = self.model.backgroundColor
 
+        self.subscribeButton.alpha = 0.0
         self.setupLabels()
 
     }
@@ -144,6 +146,7 @@ class MATVShowDetailsView : UIView {
 
         UIView.animate(withDuration: 0.4, delay: 0.3, usingSpringWithDamping: 0.6, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
             self.titleView.alpha = 1.0
+            self.subscribeButton.alpha = 1.0
             self.layoutIfNeeded()
         }, completion: nil)
     }

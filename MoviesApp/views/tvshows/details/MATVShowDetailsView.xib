@@ -51,6 +51,16 @@
                         <constraint firstItem="leu-am-dsJ" firstAttribute="centerY" secondItem="zfv-d5-5tp" secondAttribute="centerY" id="x9Z-4d-OxL"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIW-xw-nf3" userLabel="SubscribeButton" customClass="MASubscribeButton" customModule="MoviesApp" customModuleProvider="target">
+                    <rect key="frame" x="90" y="260" width="203.5" height="47"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="bIW-xw-nf3" secondAttribute="height" multiplier="13:3" id="Jzg-2g-NfL"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                    <state key="normal" title="SUBSCRIBIRME">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="utj-0S-QrW">
                     <rect key="frame" x="56.5" y="146.5" width="262.5" height="394"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -62,16 +72,6 @@
                     <connections>
                         <action selector="goBack:" destination="iN0-l3-epB" eventType="touchUpInside" id="5KH-My-53z"/>
                     </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIW-xw-nf3" userLabel="SubscribeButton" customClass="MASubscribeButton" customModule="MoviesApp" customModuleProvider="target">
-                    <rect key="frame" x="90" y="260" width="203.5" height="47"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="bIW-xw-nf3" secondAttribute="height" multiplier="13:3" id="Jzg-2g-NfL"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
-                    <state key="normal" title="SUBSCRIBIRME">
-                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </state>
                 </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -97,6 +97,7 @@
             <connections>
                 <outlet property="backgroundImageView" destination="SKJ-XM-Jnr" id="yfE-QT-12W"/>
                 <outlet property="bgView" destination="XkO-J6-RZP" id="dAx-yZ-z38"/>
+                <outlet property="subscribeButton" destination="bIW-xw-nf3" id="3ft-tK-c8D"/>
                 <outlet property="thumbnailView" destination="utj-0S-QrW" id="4gr-3l-aoZ"/>
                 <outlet property="titleLabel" destination="leu-am-dsJ" id="8te-ke-LC8"/>
                 <outlet property="titleView" destination="zfv-d5-5tp" id="YoT-BL-M3R"/>
