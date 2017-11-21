@@ -27,11 +27,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XkO-J6-RZP" userLabel="BackgroundView">
-                    <rect key="frame" x="-0.5" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" red="0.94099999999999995" green="0.72549019607843135" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SKJ-XM-Jnr" userLabel="BackgroundImage">
-                    <rect key="frame" x="-0.5" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zfv-d5-5tp" userLabel="TitleView">
                     <rect key="frame" x="0.0" y="183.5" width="375" height="66.5"/>
@@ -52,7 +52,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIW-xw-nf3" userLabel="SubscribeButton" customClass="MASubscribeButton" customModule="MoviesApp" customModuleProvider="target">
-                    <rect key="frame" x="90" y="260" width="203.5" height="47"/>
+                    <rect key="frame" x="89" y="260" width="204" height="47"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="bIW-xw-nf3" secondAttribute="height" multiplier="13:3" id="Jzg-2g-NfL"/>
                     </constraints>
@@ -76,20 +76,42 @@
                         <action selector="goBack:" destination="iN0-l3-epB" eventType="touchUpInside" id="5KH-My-53z"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OVERVIEW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uyB-3A-8f5">
+                    <rect key="frame" x="37.5" y="342" width="300" height="17.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="hUQ-in-JIy"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pHs-Cc-PxZ">
+                    <rect key="frame" x="37.5" y="375" width="300" height="292"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="bIW-xw-nf3" firstAttribute="height" relation="lessThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.9" id="6wT-wG-kM9"/>
                 <constraint firstItem="SKJ-XM-Jnr" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="7Dg-Q5-16C"/>
                 <constraint firstItem="XkO-J6-RZP" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ATp-Vc-y3W"/>
+                <constraint firstItem="uyB-3A-8f5" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="FUg-0t-UdG"/>
                 <constraint firstItem="zfv-d5-5tp" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="IST-O8-oly"/>
                 <constraint firstItem="zfv-d5-5tp" firstAttribute="height" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.1" id="MoN-N6-S8r"/>
                 <constraint firstItem="XkO-J6-RZP" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="NIv-rd-zRp"/>
+                <constraint firstItem="uyB-3A-8f5" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.8" priority="750" id="Q0x-3t-FQU"/>
                 <constraint firstItem="bIW-xw-nf3" firstAttribute="top" secondItem="zfv-d5-5tp" secondAttribute="bottom" constant="10" id="Rmc-eO-jEu"/>
                 <constraint firstItem="zfv-d5-5tp" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="Syn-9a-haa"/>
+                <constraint firstItem="pHs-Cc-PxZ" firstAttribute="top" secondItem="uyB-3A-8f5" secondAttribute="bottom" constant="15.5" id="TQa-sj-9FY"/>
                 <constraint firstItem="SKJ-XM-Jnr" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="TWN-tc-hS2"/>
                 <constraint firstItem="zfv-d5-5tp" firstAttribute="height" relation="lessThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.2" id="Uzf-a4-xlP"/>
+                <constraint firstAttribute="bottom" secondItem="pHs-Cc-PxZ" secondAttribute="bottom" id="Vzs-a7-FhJ"/>
                 <constraint firstItem="XkO-J6-RZP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="YPO-eF-WTT"/>
+                <constraint firstItem="pHs-Cc-PxZ" firstAttribute="width" secondItem="uyB-3A-8f5" secondAttribute="width" id="YfG-uN-zn5"/>
+                <constraint firstItem="uyB-3A-8f5" firstAttribute="top" secondItem="bIW-xw-nf3" secondAttribute="bottom" constant="35" id="b14-Y0-H0f"/>
                 <constraint firstItem="G3e-aS-HPL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="c4r-Aw-Ymv"/>
                 <constraint firstItem="SKJ-XM-Jnr" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="dMA-SX-thI"/>
                 <constraint firstItem="XkO-J6-RZP" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="dkb-hB-3Np"/>
@@ -97,12 +119,15 @@
                 <constraint firstItem="bIW-xw-nf3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="3.5" id="nWi-8U-Mix"/>
                 <constraint firstItem="zfv-d5-5tp" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="0.65" id="q92-fZ-3Td"/>
                 <constraint firstItem="G3e-aS-HPL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="22" id="skn-ng-gB8"/>
+                <constraint firstItem="pHs-Cc-PxZ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="tJg-GO-iej"/>
                 <constraint firstItem="bIW-xw-nf3" firstAttribute="height" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.07" id="uRf-Vp-sjN"/>
             </constraints>
             <connections>
                 <outlet property="backgroundImageView" destination="SKJ-XM-Jnr" id="yfE-QT-12W"/>
                 <outlet property="bgView" destination="XkO-J6-RZP" id="dAx-yZ-z38"/>
+                <outlet property="overviewLabel" destination="uyB-3A-8f5" id="d19-Ie-6cG"/>
                 <outlet property="subscribeButton" destination="bIW-xw-nf3" id="3ft-tK-c8D"/>
+                <outlet property="textView" destination="pHs-Cc-PxZ" id="gRG-Pb-eOz"/>
                 <outlet property="thumbnailView" destination="utj-0S-QrW" id="4gr-3l-aoZ"/>
                 <outlet property="titleLabel" destination="leu-am-dsJ" id="8te-ke-LC8"/>
                 <outlet property="titleView" destination="zfv-d5-5tp" id="YoT-BL-M3R"/>

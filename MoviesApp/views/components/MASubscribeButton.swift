@@ -9,14 +9,12 @@ import UIKit
 class MASubscribeButton : UIButton {
 
 
-    var boxHeight : CGFloat = 0.0
 
     override func draw(_ rect: CoreGraphics.CGRect) {
         super.draw(rect)
 
         var bezier:UIBezierPath
         var newHeight = rect.height
-        let fontHeight = boxHeight
 
         var newRect = CGRect(x:rect.origin.x + 1, y: rect.origin.y + 1, width: rect.size.width - 2, height:rect.size.height - 2)
 
@@ -26,6 +24,7 @@ class MASubscribeButton : UIButton {
 
         let borderColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         borderColor.setStroke()
+        bezier.lineWidth = 2.0
         bezier.stroke()
     }
 

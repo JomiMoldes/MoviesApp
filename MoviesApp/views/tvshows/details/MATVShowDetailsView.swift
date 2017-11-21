@@ -18,6 +18,8 @@ class MATVShowDetailsView : UIView {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subscribeButton: MASubscribeButton!
     @IBOutlet weak var titleViewYConstraint: NSLayoutConstraint!
+    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var overviewLabel: UILabel!
     
     
     var model : MATVShowDetailsViewModel! {
@@ -89,6 +91,10 @@ class MATVShowDetailsView : UIView {
         self.titleLabel.attributedText = attributed
 
         self.titleView.alpha = 0.0
+
+        self.textView.text = model.tvShow.overview
+        self.textView.alpha = 0.0
+        self.overviewLabel.alpha = 0.0
     }
 
     fileprivate func animateThumbnail() {
@@ -149,6 +155,11 @@ class MATVShowDetailsView : UIView {
             self.subscribeButton.alpha = 1.0
             self.layoutIfNeeded()
         }, completion: nil)
+
+        UIView.animate(withDuration: 0.8, delay: 0.5, animations: {
+            self.textView.alpha = 1.0
+            self.overviewLabel.alpha = 1.0
+        })
     }
 
     //MARK - Private
