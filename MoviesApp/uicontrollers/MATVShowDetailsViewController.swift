@@ -15,17 +15,23 @@ class MATVShowDetailsViewController : UIViewController {
         }
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-//        customView.viewDidLoad()
-    }
-
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         customView.viewDidAppear()
     }
 
-    
-    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+        customView.viewDidLayoutSubviews()
+    }
+
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+
+        customView.viewWillLayoutSubviews()
+
+
+
+    }
 }

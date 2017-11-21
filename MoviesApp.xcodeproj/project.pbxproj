@@ -12,14 +12,17 @@
 		45BAF134CF38B46EAA1F2E7D /* MAPrepareImagesForDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF93DD7D89A493249B12C /* MAPrepareImagesForDetail.swift */; };
 		45BAF1C5A08708B4B17317AB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF4ECCA9931E973BA52FF /* MainView.swift */; };
 		45BAF2EFB8FF0AA2D703B37D /* MATVShowDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF56F6D9570BB31C84988 /* MATVShowDetailsView.swift */; };
+		45BAF394DAD68ECCE1301D48 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAFDDF6C4B62B0BB22C54F /* DateExtensions.swift */; };
 		45BAF3BC7E4B631A1280C38B /* MAServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF32815D1FDB10FCFB693 /* MAServiceTest.swift */; };
 		45BAF4D42838CAE135AD7D86 /* MAGenresService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAFC4D40AE9764E268A590 /* MAGenresService.swift */; };
 		45BAF6DF477BF8263E85DF60 /* MAGenresModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF62ABE9DA553F6AD57AF /* MAGenresModel.swift */; };
 		45BAF72AA5148F440EB2157D /* MAAssetsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAFFF326A6C7551B9610C3 /* MAAssetsManager.swift */; };
+		45BAF732C0375B904EE85C16 /* MASubscribeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF7F0183324DCBB5E5D02 /* MASubscribeButton.swift */; };
 		45BAF7CB056E3D1ED1C94EAA /* MAShowCellButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF4F6025DF4A1F56B704D /* MAShowCellButton.swift */; };
 		45BAF81BA04582C7F6AFD5FB /* MoviesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAFFD8D1E8E7604AFEE258 /* MoviesService.swift */; };
 		45BAFA1F253B9929A190FB94 /* MAGlobalModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF4F2C0E37BEBB3D33AC3 /* MAGlobalModels.swift */; };
 		45BAFA220256CC4A07F5E3F7 /* TVShowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAFC2C3815CD81FA01E669 /* TVShowCell.swift */; };
+		45BAFB5ED3E93566574ED9AE /* ConstraintsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF9801F02F4D284D41404 /* ConstraintsExtensions.swift */; };
 		45BAFBB598177B8725D6B5B2 /* TVShowCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45BAF8EA1A523EAF93D1BA4F /* TVShowCellView.xib */; };
 		45BAFD76D1826AFC0413B12A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAFCF2A372633109570FB0 /* MainViewModel.swift */; };
 		45BAFDB0209E94F425F8FF40 /* MARequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF8AD84179E7628875094 /* MARequest.swift */; };
@@ -82,14 +85,17 @@
 		45BAF61ECBC5573AB89EAD52 /* TVShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowViewController.swift; sourceTree = "<group>"; };
 		45BAF62ABE9DA553F6AD57AF /* MAGenresModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAGenresModel.swift; sourceTree = "<group>"; };
 		45BAF66E1A264112840FE9CC /* MALoadImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MALoadImageService.swift; sourceTree = "<group>"; };
+		45BAF7F0183324DCBB5E5D02 /* MASubscribeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MASubscribeButton.swift; sourceTree = "<group>"; };
 		45BAF8AD84179E7628875094 /* MARequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MARequest.swift; sourceTree = "<group>"; };
 		45BAF8EA1A523EAF93D1BA4F /* TVShowCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TVShowCellView.xib; sourceTree = "<group>"; };
 		45BAF93DD7D89A493249B12C /* MAPrepareImagesForDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAPrepareImagesForDetail.swift; sourceTree = "<group>"; };
+		45BAF9801F02F4D284D41404 /* ConstraintsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintsExtensions.swift; sourceTree = "<group>"; };
 		45BAF98EF9DD7CC609B78DA2 /* MATVShowDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MATVShowDetailsViewController.swift; sourceTree = "<group>"; };
 		45BAF9EF84FF1113A0F0872C /* MAFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAFlowController.swift; sourceTree = "<group>"; };
 		45BAFC2C3815CD81FA01E669 /* TVShowCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowCell.swift; sourceTree = "<group>"; };
 		45BAFC4D40AE9764E268A590 /* MAGenresService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAGenresService.swift; sourceTree = "<group>"; };
 		45BAFCF2A372633109570FB0 /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		45BAFDDF6C4B62B0BB22C54F /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		45BAFFD8D1E8E7604AFEE258 /* MoviesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesService.swift; sourceTree = "<group>"; };
 		45BAFFF326A6C7551B9610C3 /* MAAssetsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAAssetsManager.swift; sourceTree = "<group>"; };
 		481A84031FC1B989000C2C21 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
@@ -163,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				45BAF4F6025DF4A1F56B704D /* MAShowCellButton.swift */,
+				45BAF7F0183324DCBB5E5D02 /* MASubscribeButton.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -226,6 +233,8 @@
 			children = (
 				482DBBDB1FC3490F00F4EE34 /* UIImageExtensions.swift */,
 				45BAF532352648E95598B54C /* UILabelExtensions.swift */,
+				45BAFDDF6C4B62B0BB22C54F /* DateExtensions.swift */,
+				45BAF9801F02F4D284D41404 /* ConstraintsExtensions.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -652,6 +661,9 @@
 				45BAF04EC8FBD0E6CDE55F11 /* MATVShowDetailsViewController.swift in Sources */,
 				45BAFF878BB34BF79ACA7727 /* MAFlowController.swift in Sources */,
 				45BAF134CF38B46EAA1F2E7D /* MAPrepareImagesForDetail.swift in Sources */,
+				45BAF394DAD68ECCE1301D48 /* DateExtensions.swift in Sources */,
+				45BAFB5ED3E93566574ED9AE /* ConstraintsExtensions.swift in Sources */,
+				45BAF732C0375B904EE85C16 /* MASubscribeButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

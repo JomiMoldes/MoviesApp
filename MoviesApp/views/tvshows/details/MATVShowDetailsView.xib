@@ -6,8 +6,15 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Helvetica.ttc">
+            <string>Helvetica-Bold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MATVShowDetailsViewController" customModule="MoviesApp" customModuleProvider="target">
             <connections>
@@ -26,6 +33,24 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SKJ-XM-Jnr" userLabel="BackgroundImage">
                     <rect key="frame" x="-0.5" y="0.0" width="375" height="667"/>
                 </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zfv-d5-5tp" userLabel="TitleView">
+                    <rect key="frame" x="0.0" y="183.5" width="375" height="66.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leu-am-dsJ" userLabel="TitleLabel">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
+                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="25"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="leu-am-dsJ" firstAttribute="height" secondItem="zfv-d5-5tp" secondAttribute="height" id="9c1-8C-8c0"/>
+                        <constraint firstItem="leu-am-dsJ" firstAttribute="centerX" secondItem="zfv-d5-5tp" secondAttribute="centerX" id="GI1-4y-tor"/>
+                        <constraint firstItem="leu-am-dsJ" firstAttribute="width" secondItem="zfv-d5-5tp" secondAttribute="width" id="h7Z-bV-fY5"/>
+                        <constraint firstItem="leu-am-dsJ" firstAttribute="centerY" secondItem="zfv-d5-5tp" secondAttribute="centerY" id="x9Z-4d-OxL"/>
+                    </constraints>
+                </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="utj-0S-QrW">
                     <rect key="frame" x="56.5" y="146.5" width="262.5" height="394"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -38,22 +63,44 @@
                         <action selector="goBack:" destination="iN0-l3-epB" eventType="touchUpInside" id="5KH-My-53z"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIW-xw-nf3" userLabel="SubscribeButton" customClass="MASubscribeButton" customModule="MoviesApp" customModuleProvider="target">
+                    <rect key="frame" x="90" y="260" width="203.5" height="47"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="bIW-xw-nf3" secondAttribute="height" multiplier="13:3" id="Jzg-2g-NfL"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                    <state key="normal" title="SUBSCRIBIRME">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="bIW-xw-nf3" firstAttribute="height" relation="lessThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.9" id="6wT-wG-kM9"/>
                 <constraint firstItem="SKJ-XM-Jnr" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="7Dg-Q5-16C"/>
                 <constraint firstItem="XkO-J6-RZP" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ATp-Vc-y3W"/>
+                <constraint firstItem="zfv-d5-5tp" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="IST-O8-oly"/>
+                <constraint firstItem="zfv-d5-5tp" firstAttribute="height" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.1" id="MoN-N6-S8r"/>
                 <constraint firstItem="XkO-J6-RZP" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="NIv-rd-zRp"/>
+                <constraint firstItem="bIW-xw-nf3" firstAttribute="top" secondItem="zfv-d5-5tp" secondAttribute="bottom" constant="10" id="Rmc-eO-jEu"/>
+                <constraint firstItem="zfv-d5-5tp" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="Syn-9a-haa"/>
                 <constraint firstItem="SKJ-XM-Jnr" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="TWN-tc-hS2"/>
+                <constraint firstItem="zfv-d5-5tp" firstAttribute="height" relation="lessThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.2" id="Uzf-a4-xlP"/>
                 <constraint firstItem="XkO-J6-RZP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="YPO-eF-WTT"/>
                 <constraint firstItem="SKJ-XM-Jnr" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="dMA-SX-thI"/>
                 <constraint firstItem="XkO-J6-RZP" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="dkb-hB-3Np"/>
                 <constraint firstItem="SKJ-XM-Jnr" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="gn5-7P-cc6"/>
+                <constraint firstItem="bIW-xw-nf3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="3.5" id="nWi-8U-Mix"/>
+                <constraint firstItem="zfv-d5-5tp" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="0.65" id="q92-fZ-3Td"/>
+                <constraint firstItem="bIW-xw-nf3" firstAttribute="height" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.07" id="uRf-Vp-sjN"/>
             </constraints>
             <connections>
                 <outlet property="backgroundImageView" destination="SKJ-XM-Jnr" id="yfE-QT-12W"/>
                 <outlet property="bgView" destination="XkO-J6-RZP" id="dAx-yZ-z38"/>
                 <outlet property="thumbnailView" destination="utj-0S-QrW" id="4gr-3l-aoZ"/>
+                <outlet property="titleLabel" destination="leu-am-dsJ" id="8te-ke-LC8"/>
+                <outlet property="titleView" destination="zfv-d5-5tp" id="YoT-BL-M3R"/>
+                <outlet property="titleViewYConstraint" destination="q92-fZ-3Td" id="e2k-l2-bwe"/>
             </connections>
             <point key="canvasLocation" x="25.5" y="51.5"/>
         </view>
