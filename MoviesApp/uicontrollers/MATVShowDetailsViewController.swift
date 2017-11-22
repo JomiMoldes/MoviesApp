@@ -25,13 +25,4 @@ class MATVShowDetailsViewController : UIViewController {
 
         customView.viewDidLayoutSubviews()
     }
-
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-
-        customView.viewWillLayoutSubviews()
-
-
-
-    }
 }

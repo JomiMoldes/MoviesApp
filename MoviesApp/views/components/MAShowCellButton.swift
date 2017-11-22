@@ -15,10 +15,8 @@ class MAShowCellButton : UIButton {
         super.draw(rect)
 
         var bezier:UIBezierPath
-        var newHeight = rect.height
-        let fontHeight = boxHeight
 
-        var newRect = CGRect(x:rect.origin.x + 1, y: rect.origin.y + 1, width: rect.size.width - 2, height:rect.size.height - 2)
+        let newRect = CGRect(x:rect.origin.x + 1, y: rect.origin.y + 1, width: rect.size.width - 2, height:rect.size.height - 2)
 
         bezier = UIBezierPath(roundedRect: newRect, byRoundingCorners: [.topLeft, .bottomLeft, .topRight, .bottomRight], cornerRadii: roundSize)
 

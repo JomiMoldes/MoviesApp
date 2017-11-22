@@ -8,7 +8,6 @@ target 'MoviesApp' do
 	pod 'RxSwift',    '~> 4.0'
     pod 'RxCocoa',    '~> 4.0'
     pod 'Alamofire',  '~> 4.5'
-    pod 'ColorThiefSwift', '>= 0.3.0'
 end
 
 target 'MoviesAppTests' do
@@ -17,5 +16,4 @@ target 'MoviesAppTests' do
     pod 'RxCocoa',    '~> 4.0'
     pod 'Alamofire',  '~> 4.5'
     pod 'OHHTTPStubs/Swift'
-    pod 'ColorThiefSwift', '>= 0.3.0'
 end

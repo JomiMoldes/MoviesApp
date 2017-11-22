@@ -59,9 +59,7 @@ class MAPrepareImagesForDetail {
         return Promise<UIColor> {
             fulfill, reject in
 
-            DispatchQueue.global(qos: .utility).async {
-                fulfill(LEColorPicker().colorScheme(from: image)!.backgroundColor)
-            }
+            fulfill(LEColorPicker().colorScheme(from: image)!.backgroundColor)
 
         }
 
